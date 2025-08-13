@@ -19,11 +19,15 @@ public class RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
-    public List<Recipe> getRecipes() {
+    public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();
     }
 
-    public Recipe addOrUpdateRecipe(Recipe recipe) {
+    public Recipe addRecipe(Recipe recipe) {
+        return recipeRepository.save(recipe);
+    }
+
+    public Recipe UpdateRecipe(Recipe recipe) {
         return recipeRepository.save(recipe);
     }
 
