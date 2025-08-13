@@ -3,6 +3,7 @@ package nl.miwnn.ch16.dennis.Ngredients.services;
 import nl.miwnn.ch16.dennis.Ngredients.Exceptions.RecipeNotFoundException;
 import nl.miwnn.ch16.dennis.Ngredients.models.Recipe;
 import nl.miwnn.ch16.dennis.Ngredients.repositories.RecipeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +16,7 @@ public class RecipeService {
 
     private final RecipeRepository recipeRepository;
 
+    @Autowired
     public RecipeService(RecipeRepository recipeRepository) {
         this.recipeRepository = recipeRepository;
     }

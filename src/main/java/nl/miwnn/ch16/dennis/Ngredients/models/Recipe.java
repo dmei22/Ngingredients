@@ -1,8 +1,10 @@
 package nl.miwnn.ch16.dennis.Ngredients.models;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+@Entity
 public class Recipe {
 
     @Id @GeneratedValue
