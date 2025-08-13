@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Spaghetti Carbonara",
+    "description": "A classic Italian pasta dish with eggs, cheese, pancetta, and pepper.",
+    "ingredients": "Spaghetti, eggs, Parmesan cheese, pancetta, black pepper, salt",
+    "instructions": "Boil pasta. Cook pancetta until crispy. Mix eggs and cheese. Combine all with pasta and pancetta off heat.",
+    "preparationTime": "25 minutes"
+  },
+  {
+    "name": "Chicken Curry",
+    "description": "Spicy and flavorful chicken curry made with coconut milk and Indian spices.",
+    "ingredients": "Chicken, onion, garlic, ginger, tomatoes, coconut milk, curry powder",
+    "instructions": "Sauté onion, garlic, and ginger. Add spices and chicken. Pour in tomatoes and coconut milk. Simmer until cooked.",
+    "preparationTime": "45 minutes"
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "description": "A quick and healthy stir-fried vegetable medley with soy sauce and garlic.",
+    "ingredients": "Broccoli, bell pepper, carrots, snap peas, soy sauce, garlic, sesame oil",
+    "instructions": "Heat oil. Stir-fry vegetables on high heat. Add soy sauce and garlic. Cook until tender-crisp.",
+    "preparationTime": "20 minutes"
+  },
+  {
+    "name": "Beef Tacos",
+    "description": "Tacos with seasoned ground beef, cheese, and fresh toppings.",
+    "ingredients": "Ground beef, taco seasoning, tortillas, lettuce, tomato, cheese, sour cream",
+    "instructions": "Cook beef with seasoning. Warm tortillas. Assemble tacos with toppings.",
+    "preparationTime": "30 minutes"
+  },
+  {
+    "name": "Pancakes",
+    "description": "Fluffy pancakes perfect for breakfast with syrup or fruit.",
+    "ingredients": "Flour, eggs, milk, baking powder, sugar, salt, butter",
+    "instructions": "Mix dry ingredients. Add wet ingredients and whisk. Pour batter onto griddle. Flip when bubbles form.",
+    "preparationTime": "20 minutes"
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "description": "Crispy golden grilled sandwich with melted cheese inside.",
+    "ingredients": "Bread, cheese slices, butter",
+    "instructions": "Butter bread. Place cheese between slices. Grill in pan until golden on both sides.",
+    "preparationTime": "10 minutes"
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce tossed in creamy Caesar dressing with croutons and cheese.",
+    "ingredients": "Romaine lettuce, Caesar dressing, croutons, Parmesan cheese, lemon juice",
+    "instructions": "Toss lettuce with dressing. Top with croutons and cheese. Squeeze lemon juice on top.",
+    "preparationTime": "15 minutes"
+  },
+  {
+    "name": "Baked Salmon",
+    "description": "Oven-baked salmon fillet with lemon and herbs.",
+    "ingredients": "Salmon fillet, lemon, garlic, olive oil, dill, salt, pepper",
+    "instructions": "Place salmon in baking dish. Season with herbs and lemon. Bake at 400°F (200°C) for 15–20 minutes.",
+    "preparationTime": "25 minutes"
+  },
+  {
+    "name": "Tomato Soup",
+    "description": "Creamy and rich tomato soup perfect for cold days.",
+    "ingredients": "Tomatoes, onion, garlic, vegetable broth, cream, salt, pepper",
+    "instructions": "Cook tomatoes, onion, and garlic. Blend and add broth and cream. Simmer until thickened.",
+    "preparationTime": "35 minutes"
+  },
+  {
+    "name": "Banana Smoothie",
+    "description": "Refreshing smoothie with banana, yogurt, and honey.",
+    "ingredients": "Banana, yogurt, milk, honey, ice cubes",
+    "instructions": "Blend all ingredients until smooth. Serve cold.",
+    "preparationTime": "5 minutes"
+  }
+]
