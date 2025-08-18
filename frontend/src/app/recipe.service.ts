@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class NgredientsService {
+export class RecipeService {
 
   private apiServerUrl = 'http://localhost:8080';
 
