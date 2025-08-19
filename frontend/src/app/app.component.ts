@@ -1,23 +1,23 @@
 import {Component, OnInit, signal} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Recipe} from './recipe';
-import {RecipeService} from './recipe.service';
+import {AppService} from './app.service';
 import {catchError, of, tap} from 'rxjs';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class App implements OnInit{
+export class AppComponent implements OnInit{
 
   protected readonly title = signal('Ngredients');
 
   public recipes : Recipe[] = [];
 
 
-  constructor(private recipeService : RecipeService) {
+  constructor(private recipeService : AppService) {
   }
 
   ngOnInit() {
