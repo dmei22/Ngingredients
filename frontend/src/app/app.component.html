@@ -1,3 +1,16 @@
-@for (recipe of recipes; track recipe.id) {
-  <p>{{recipe.name}}</p>
-}
+
+<div class="row row-cols-4 justify-content-center">
+  @for (recipe of recipes; track recipe.id) {
+    <div class="col">
+      <div class="card mx-auto my-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{recipe.name}}</h5>
+          <p class="card-text">{{recipe.description}}</p>
+        </div>
+        <div class="card-footer text-body-secondary">
+          {{recipe.preparationTime}}
+        </div>
+      </div>
+    </div>
+  }
+</div>
