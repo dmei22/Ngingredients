@@ -1,15 +1,17 @@
-import {Component, OnInit, signal} from '@angular/core';
-import {Recipe} from '../../recipe';
-import {AppService} from '../../app.service';
-import {catchError, of, tap} from 'rxjs';
-import {HttpErrorResponse} from '@angular/common/http';
-import {FormsModule, NgForm} from '@angular/forms';
+import { Component, OnInit, signal } from '@angular/core';
+import { Recipe } from '../../recipe';
+import { AppService } from '../../app.service';
+import { catchError, of, tap } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
+import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-overview-component',
   imports: [
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   templateUrl: './overview-component.html',
   styleUrl: './overview-component.css'
