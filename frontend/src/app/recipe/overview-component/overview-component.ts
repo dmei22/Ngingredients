@@ -20,7 +20,6 @@ export class OverviewComponent implements OnInit{
 
   public recipes : Recipe[] = [];
 
-
   constructor(private recipeService : AppService) {
   }
 
