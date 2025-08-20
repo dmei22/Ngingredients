@@ -2,3 +2,28 @@
   transform: scale(1.1);
   transition: 0.5s;
 }
+
+.angular-gradient-text {
+  /* Background color */
+  background: linear-gradient(
+    to right,
+    #dd0031,   /* Angular Red */
+    #c3002f,   /* Darker Angular Red */
+    #770022,   /* Deep Red/Maroon */
+    #a6120d,   /* Angular Orange/Red */
+    #dd0031    /* Loop back to red */
+  );
+  /* Scale gradient to 200% */
+  background-size: 200% auto;
+
+  /* Form background to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Set actual text to transparent*/
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-weight: bold;
+}
+
