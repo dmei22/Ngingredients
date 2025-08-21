@@ -2,14 +2,15 @@
   @for (recipe of recipes; track recipe.id) {
 
       <div class="col">
-          <div class="card m-2 mx-auto my-3 shadow rounded-0 float"
+          <div class="card m-2 mx-auto my-3 shadow rounded-1 float"
                role="button" [routerLink]="['/details', recipe.id]"
                style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">{{recipe.name}}</h5>
-              <p class="card-text text-truncate">{{recipe.description}}</p>
+              <p class="card-text angular-text text-truncate">{{recipe.description}}</p>
             </div>
-            <div class="card-footer text-body-secondary">
+            <div class="card-footer angular-text">
+              <i class="bi bi-clock-fill"></i>
               {{recipe.preparationTime}}
             </div>
           </div>

@@ -10,11 +10,12 @@
     #dd0031,   /* Angular Red */
     #c3002f,   /* Darker Angular Red */
     #770022,   /* Deep Red/Maroon */
+    #6f42c1,   /* Angular Purple (Material Purple 500) */
     #a6120d,   /* Angular Orange/Red */
-    #dd0031    /* Loop back to red */
+    #dd0031    /* Loop back to Angular Red */
   );
   /* Scale gradient to 200% */
-  background-size: 200% auto;
+  background-size: 150% auto;
 
   /* Form background to text */
   -webkit-background-clip: text;
@@ -27,3 +28,31 @@
   font-weight: bold;
 }
 
+.card {
+  border: 0;
+  background-color: rgb(246, 245, 246);
+}
+
+.card:hover {
+  color: #6f42c1;
+}
+
+.text-truncate:hover {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.angular-text {
+  color: rgb(21, 20, 23);
+}
+
+.btn {
+  border: none;
+  background-color: #dd0031;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #770022;
+}
