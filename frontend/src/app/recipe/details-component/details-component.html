@@ -3,3 +3,58 @@
 <p>{{recipe.ingredients}}</p>
 <p>{{recipe.instructions}}</p>
 <p>{{recipe.preparationTime}}</p>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRecipeModal">
+  Edit
+</button>
+
+<!-- Add recipe modal -->
+<div class="modal fade" id="editRecipeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add new recipe</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form #editForm="ngForm">
+
+          <input ngModel="{{recipe?.id}}" name="id" class="form-control" type="hidden">
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Recipe title</label>
+            <input ngModel="{{recipe?.name}}" name="name" class="form-control" id="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea ngModel="{{recipe?.description}}" name="description" class="form-control" id="description" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="ingredients" class="form-label">Ingredients</label>
+            <textarea ngModel="{{recipe?.ingredients}}" name="ingredients" class="form-control" id="ingredients" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="instructions" class="form-label">Instructions</label>
+            <textarea ngModel="{{recipe.instructions}}" name="instructions" class="form-control" id="instructions" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="preparationTime" class="form-label">Preparation Time</label>
+            <input ngModel="{{recipe?.preparationTime}}" name="preparationTime" class="form-control" id="preparationTime" required>
+          </div>
+
+          <div class="modal-footer">
+            <button id="close-edit-recipe-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button [disabled]="editForm.invalid" (click)="onEditRecipe(editForm.value)" type="submit" class="btn btn-primary">Save recipe</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

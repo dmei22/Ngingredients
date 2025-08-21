@@ -4,10 +4,13 @@ import {Recipe} from '../../recipe';
 import {AppService} from '../../app.service';
 import {catchError, of, tap} from 'rxjs';
 import {HttpErrorResponse} from '@angular/common/http';
+import {FormsModule, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-details-component',
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './details-component.html',
   styleUrl: './details-component.css'
 })
@@ -23,6 +26,23 @@ export class DetailsComponent {
 
   private getRecipeById(id: number) {
     this.recipeService.getRecipeById(id)
+      .pipe(
+        tap((response: Recipe) => {
+          this.recipe = response;
+          console.log(response);
+        }),
+        catchError((error: HttpErrorResponse) => {
+          alert(error.message);
+          return of([]);
+        })
+      )
+      .subscribe();
+  }
+
+  public onEditRecipe(recipe: Recipe) {
+    document.getElementById("close-edit-recipe-modal")?.click();
+
+    this.recipeService.updateRecipe(recipe)
       .pipe(
         tap((response: Recipe) => {
           this.recipe = response;
