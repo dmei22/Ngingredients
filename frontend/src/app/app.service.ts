@@ -17,6 +17,10 @@ export class AppService {
     return this.http.get<Recipe[]>(`${this.apiServerUrl}/recipe/all`);
   }
 
+  public getRandomRecipeId(): Observable<number> {
+    return this.http.get<number>(`${this.apiServerUrl}/recipe/random`);
+  }
+
   public getRecipeById(id: number): Observable<Recipe> {
     return this.http.get<Recipe>(`${this.apiServerUrl}/recipe/find/${id}`);
   }

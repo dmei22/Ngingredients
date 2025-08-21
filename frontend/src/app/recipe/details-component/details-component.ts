@@ -16,12 +16,32 @@ import { FormsModule } from '@angular/forms';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  recipeId : number;
+  recipeId!: number;
   recipe!: Recipe;
 
-  constructor(private recipeService : AppService, private router: Router) {
-    this.recipeId = Number(this.route.snapshot.params["id"])
-    this.getRecipeById(this.recipeId);
+  constructor(private recipeService: AppService, private router: Router) {
+    if (this.route.snapshot.params["id"] === "random") {
+      this.setRandomRecipeId();
+    } else {
+      this.recipeId = Number(this.route.snapshot.params["id"])
+      this.getRecipeById(this.recipeId);
+    }
+  }
+
+  private setRandomRecipeId() {
+    this.recipeService.getRandomRecipeId()
+      .pipe(
+        tap((response: number) => {
+          this.recipeId = response;
+          console.log(response);
+          this.getRecipeById(this.recipeId);
+        }),
+        catchError((error: HttpErrorResponse) => {
+          alert(error.message);
+          return of([]);
+        })
+      )
+      .subscribe();
   }
 
   private getRecipeById(id: number) {

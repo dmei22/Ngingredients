@@ -23,6 +23,13 @@ public class RecipeController {
         return new ResponseEntity<>(recipeList, HttpStatus.OK);
     }
 
+    @GetMapping("/random")
+    public ResponseEntity<Long> randomRecipe() {
+        // Recipe ids start with 1
+        int randomId = (int) (Math.random() * recipeService.getAllRecipes().size()) + 1;
+        return new ResponseEntity<>((long) randomId, HttpStatus.OK);
+    }
+
     @GetMapping("/find/{id}")
     public ResponseEntity<Recipe> findById(@PathVariable("id") Long id) {
         Recipe recipe = recipeService.findById(id);
