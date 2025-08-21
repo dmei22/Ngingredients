@@ -1,15 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
-import {Recipe} from '../../recipe';
-import {AppService} from '../../app.service';
-import {catchError, of, tap} from 'rxjs';
-import {HttpErrorResponse} from '@angular/common/http';
-import {FormsModule, NgForm} from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Recipe } from '../../recipe';
+import { AppService } from '../../app.service';
+import { catchError, of, tap } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-details-component',
   imports: [
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './details-component.html',
   styleUrl: './details-component.css'
@@ -19,7 +19,7 @@ export class DetailsComponent {
   recipeId : number;
   recipe!: Recipe;
 
-  constructor(private recipeService : AppService) {
+  constructor(private recipeService : AppService, private router: Router) {
     this.recipeId = Number(this.route.snapshot.params["id"])
     this.getRecipeById(this.recipeId);
   }
@@ -54,5 +54,21 @@ export class DetailsComponent {
         })
       )
       .subscribe();
+  }
+
+  public onDeleteRecipe() {
+    document.getElementById("close-delete-recipe-modal")?.click();
+
+    this.recipeService.deleteRecipe(this.recipeId)
+      .pipe(
+        tap((response: void)=> {
+          console.log(response);
+          this.router.navigate([""]);
+        }),
+        catchError((error: HttpErrorResponse)=> {
+          alert(error.message);
+          return of([]);
+        })
+      ).subscribe()
   }
 }

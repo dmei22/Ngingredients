@@ -7,13 +7,16 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRecipeModal">
   Edit
 </button>
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
+  Delete
+</button>
 
-<!-- Add recipe modal -->
+<!-- Edit recipe modal -->
 <div class="modal fade" id="editRecipeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add new recipe</h1>
+        <h1 class="modal-title fs-5" id="editModalLabel">Add new recipe</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -52,6 +55,28 @@
             <button [disabled]="editForm.invalid" (click)="onEditRecipe(editForm.value)" type="submit" class="btn btn-primary">Save recipe</button>
           </div>
         </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete recipe modal -->
+<div class="modal fade" id="deleteRecipeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="deleteModalLabel">Delete recipe</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+          <p>Are you sure you want to delete recipe {{recipe.name}}</p>
+
+          <div class="modal-footer">
+            <button id="close-delete-recipe-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button (click)="onDeleteRecipe()" type="submit" class="btn btn-danger">Yes</button>
+          </div>
 
       </div>
     </div>
