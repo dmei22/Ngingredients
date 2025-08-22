@@ -2,16 +2,25 @@
   @for (recipe of recipes; track recipe.id) {
 
       <div class="col">
-          <div class="card m-2 mx-auto my-3 shadow rounded-1 float"
-               role="button" [routerLink]="['/details', recipe.id]"
-               style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">{{recipe.name}}</h5>
+          <div class="card m-2 mx-auto my-3 shadow rounded-1 float" style="width: 18rem;">
+
+            <div class="card-body" role="button" [routerLink]="['/details', recipe.id]">
+              <h5 class="card-title text-truncate">{{recipe.name}}</h5>
               <p class="card-text angular-text text-truncate">{{recipe.description}}</p>
             </div>
-            <div class="card-footer angular-text">
-              <i class="bi bi-clock-fill"></i>
-              {{recipe.preparationTime}}
+
+            <div class="card-footer angular-text d-flex">
+              <div>
+                <i class="bi bi-clock-fill"></i> {{recipe.preparationTime}}
+              </div>
+
+              <div class="ms-auto" (click)="onToggleRecipeFavourite(recipe.id)">
+                @if (recipe.isFavourite) {
+                  <i class="bi bi-heart-fill"></i>
+                } @else {
+                  <i class="bi bi-heart"></i>
+                }
+              </div>
             </div>
           </div>
       </div>
@@ -37,7 +46,7 @@
 
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea ngModel name="description" class="form-control" id="description" rows="3" required></textarea>
+            <textarea ngModel name="description" class="form-control" id="description" rows="3" required maxlength="255"></textarea>
           </div>
 
           <div class="mb-3">

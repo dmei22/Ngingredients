@@ -9,16 +9,18 @@
     </h1>
   </div>
 
-  <div class="col-5 text-start align-content-center">
-      <div class="btn-group " role="group" aria-label="Basic outlined example">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRecipeModal">
-        new
-      </button>
-      <button type="button" class="btn btn-primary" [routerLink]="['/details', 'random']">
-        random
-      </button>
+  @if (router.url === "/overview") {
+    <div class="col-5 text-start align-content-center">
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-primary header-btn" data-bs-toggle="modal" data-bs-target="#addRecipeModal">
+          new
+        </button>
+        <button type="button" class="btn btn-primary header-btn" [routerLink]="['/details', 'random']">
+          random
+        </button>
+      </div>
     </div>
-  </div>
+  }
 
 </div>
 

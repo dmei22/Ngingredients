@@ -37,4 +37,8 @@ export class AppService {
     return this.http.delete<void>(`${this.apiServerUrl}/recipe/delete/${recipeId}`);
   }
 
+  public toggleRecipeFavourite(recipeId: number): Observable<Recipe> {
+    return this.http.put<Recipe>(`${this.apiServerUrl}/recipe/toggleFavourite/${recipeId}`, {});
+  }
+
 }

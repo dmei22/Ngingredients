@@ -60,4 +60,19 @@ export class OverviewComponent implements OnInit{
         })
       ).subscribe();
   }
+
+  public onToggleRecipeFavourite(recipeId: number) {
+    this.recipeService.toggleRecipeFavourite(recipeId)
+      .pipe(
+        tap((response: Recipe) => {
+        console.log(response);
+        this.getRecipes();
+        }),
+        catchError((error: HttpErrorResponse) => {
+          alert(error.message);
+          return of(null);
+        })
+      ).subscribe();
+  }
+
 }

@@ -1,5 +1,5 @@
 .float:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .card {
-  border: 0;
+  border: none;
   background-color: rgb(246, 245, 246);
 }
 
@@ -47,12 +47,20 @@
   color: rgb(21, 20, 23);
 }
 
-.btn {
+.header-btn {
   border: none;
   background-color: #dd0031;
   font-weight: bold;
 }
 
-.btn:hover {
+.header-btn:hover {
   background-color: #770022;
+}
+
+.bi-heart, .bi-heart-fill {
+  color: #dd0031;
+}
+
+.card-title {
+  font-weight: bold;
 }

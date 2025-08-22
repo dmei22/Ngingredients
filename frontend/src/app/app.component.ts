@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -15,5 +15,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent{
+
+  constructor(public router: Router) {
+  }
 
 }

@@ -4,12 +4,16 @@
 <p>{{recipe.instructions}}</p>
 <p>{{recipe.preparationTime}}</p>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRecipeModal">
-  Edit
-</button>
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
-  Delete
-</button>
+<div class="d-grid gap-2">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRecipeModal">
+    Edit
+  </button>
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
+    Delete
+  </button>
+</div>
+
+
 
 <!-- Edit recipe modal -->
 <div class="modal fade" id="editRecipeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

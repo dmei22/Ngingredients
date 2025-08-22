@@ -1,20 +1,25 @@
 package nl.miwnn.ch16.dennis.Ngredients.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Recipe {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
     private String description;
+
+    @Column(columnDefinition = "TEXT")
     private String ingredients;
+
+    @Column(columnDefinition = "TEXT")
     private String instructions;
+
     private String preparationTime;
+
+    private boolean isFavourite;
 
     public Long getId() {
         return id;
@@ -62,5 +67,13 @@ public class Recipe {
 
     public void setPreparationTime(String preparationTime) {
         this.preparationTime = preparationTime;
+    }
+
+    public boolean getIsFavourite() {
+        return isFavourite;
+    }
+
+    public void setIsFavourite(boolean favourite) {
+        this.isFavourite = favourite;
     }
 }

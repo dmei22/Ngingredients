@@ -44,7 +44,7 @@ public class RecipeController {
 
     @PutMapping("/update")
     public ResponseEntity<Recipe> updateRecipe(@RequestBody Recipe recipe) {
-        Recipe updateRecipe = recipeService.addRecipe(recipe);
+        Recipe updateRecipe = recipeService.UpdateRecipe(recipe);
         return new ResponseEntity<>(updateRecipe, HttpStatus.OK);
     }
 
@@ -52,5 +52,13 @@ public class RecipeController {
     public ResponseEntity<?> deleteRecipe(@PathVariable("id") Long id) {
         recipeService.deleteRecipe(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/toggleFavourite/{id}")
+    public ResponseEntity<Recipe> toggleRecipeFavourite(@PathVariable("id") Long id) {
+        Recipe recipe = recipeService.findById(id);
+        recipeService.toggleRecipeFavourite(recipe);
+
+        return new ResponseEntity<>(recipe, HttpStatus.OK);
     }
 }

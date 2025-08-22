@@ -2,71 +2,82 @@
   {
     "name": "Spaghetti Carbonara",
     "description": "A classic Italian pasta dish with eggs, cheese, pancetta, and pepper.",
-    "ingredients": "Spaghetti, eggs, Parmesan cheese, pancetta, black pepper, salt",
-    "instructions": "Boil pasta. Cook pancetta until crispy. Mix eggs and cheese. Combine all with pasta and pancetta off heat.",
-    "preparationTime": "25 minutes"
+    "ingredients": "Spaghetti, large eggs, freshly grated Parmesan cheese, diced pancetta or guanciale, freshly ground black pepper, and a pinch of salt for the pasta water. Optional: chopped parsley or extra cheese for garnish.",
+    "instructions": "Bring a large pot of salted water to a boil and cook the spaghetti until al dente, following package instructions. While the pasta cooks, heat a skillet over medium heat and cook the pancetta until golden brown and crispy. In a separate bowl, whisk together the eggs and Parmesan cheese until well combined and smooth. Once the pasta is ready, reserve a cup of the pasta water and drain the rest. Quickly toss the hot pasta with the egg and cheese mixture off the heat, stirring vigorously to create a creamy sauce. Add the crispy pancetta and a splash of the reserved pasta water if needed to loosen the sauce. Finish with a generous amount of freshly ground black pepper and serve immediately.",
+    "preparationTime": "25 minutes",
+    "isFavourite": true
   },
+
   {
     "name": "Chicken Curry",
     "description": "Spicy and flavorful chicken curry made with coconut milk and Indian spices.",
     "ingredients": "Chicken, onion, garlic, ginger, tomatoes, coconut milk, curry powder",
-    "instructions": "Sauté onion, garlic, and ginger. Add spices and chicken. Pour in tomatoes and coconut milk. Simmer until cooked.",
-    "preparationTime": "45 minutes"
+    "instructions": "Sauté finely chopped onion, minced garlic, and fresh ginger in sizzling oil until golden and aromatic. Stir in bold spices and tender chunks of chicken, letting the flavors meld. Pour in rich crushed tomatoes and creamy coconut milk, then let it simmer gently until the chicken is succulent and the sauce thickens into a fragrant, velvety curry.",
+    "preparationTime": "45 minutes",
+    "isFavourite": false
   },
   {
     "name": "Vegetable Stir Fry",
     "description": "A quick and healthy stir-fried vegetable medley with soy sauce and garlic.",
     "ingredients": "Broccoli, bell pepper, carrots, snap peas, soy sauce, garlic, sesame oil",
-    "instructions": "Heat oil. Stir-fry vegetables on high heat. Add soy sauce and garlic. Cook until tender-crisp.",
-    "preparationTime": "20 minutes"
+    "instructions": "Heat a splash of oil in a hot wok until shimmering. Toss in the vegetables and stir-fry over high heat, keeping them moving to sear evenly. Add a splash of soy sauce and freshly minced garlic, letting the aromas rise. Continue cooking just until the vegetables are tender-crisp, bright, and bursting with flavor.",
+    "preparationTime": "20 minutes",
+    "isFavourite": false
   },
   {
     "name": "Beef Tacos",
     "description": "Tacos with seasoned ground beef, cheese, and fresh toppings.",
     "ingredients": "Ground beef, taco seasoning, tortillas, lettuce, tomato, cheese, sour cream",
     "instructions": "Cook beef with seasoning. Warm tortillas. Assemble tacos with toppings.",
-    "preparationTime": "30 minutes"
+    "preparationTime": "30 minutes",
+    "isFavourite": false
   },
   {
     "name": "Pancakes",
     "description": "Fluffy pancakes perfect for breakfast with syrup or fruit.",
     "ingredients": "Flour, eggs, milk, baking powder, sugar, salt, butter",
-    "instructions": "Mix dry ingredients. Add wet ingredients and whisk. Pour batter onto griddle. Flip when bubbles form.",
-    "preparationTime": "20 minutes"
+    "instructions": "Combine all dry ingredients in a bowl, whisking them together until evenly blended. Gradually add the wet ingredients, stirring briskly to create a smooth, lump-free batter. Pour generous spoonfuls onto a hot, greased griddle, letting the batter spread naturally. Cook until bubbles appear and edges set, then carefully flip to golden perfection.",
+    "preparationTime": "20 minutes",
+    "isFavourite": true
   },
   {
     "name": "Grilled Cheese Sandwich",
     "description": "Crispy golden grilled sandwich with melted cheese inside.",
     "ingredients": "Bread, cheese slices, butter",
-    "instructions": "Butter bread. Place cheese between slices. Grill in pan until golden on both sides.",
-    "preparationTime": "10 minutes"
+    "instructions": "Generously spread creamy butter on each slice of bread, coating every edge. Nestle slices of melty cheese between the bread to create a gooey, irresistible filling. Grill the sandwich in a hot pan, pressing gently, until each side turns perfectly golden brown and the cheese oozes deliciously.",
+    "preparationTime": "10 minutes",
+    "isFavourite": true
   },
   {
     "name": "Caesar Salad",
     "description": "Crisp romaine lettuce tossed in creamy Caesar dressing with croutons and cheese.",
     "ingredients": "Romaine lettuce, Caesar dressing, croutons, Parmesan cheese, lemon juice",
     "instructions": "Toss lettuce with dressing. Top with croutons and cheese. Squeeze lemon juice on top.",
-    "preparationTime": "15 minutes"
+    "preparationTime": "15 minutes",
+    "isFavourite": false
   },
   {
     "name": "Baked Salmon",
     "description": "Oven-baked salmon fillet with lemon and herbs.",
     "ingredients": "Salmon fillet, lemon, garlic, olive oil, dill, salt, pepper",
     "instructions": "Place salmon in baking dish. Season with herbs and lemon. Bake at 400°F (200°C) for 15–20 minutes.",
-    "preparationTime": "25 minutes"
+    "preparationTime": "25 minutes",
+    "isFavourite": true
   },
   {
     "name": "Tomato Soup",
     "description": "Creamy and rich tomato soup perfect for cold days.",
     "ingredients": "Tomatoes, onion, garlic, vegetable broth, cream, salt, pepper",
     "instructions": "Cook tomatoes, onion, and garlic. Blend and add broth and cream. Simmer until thickened.",
-    "preparationTime": "35 minutes"
+    "preparationTime": "35 minutes",
+    "isFavourite": false
   },
   {
     "name": "Banana Smoothie",
     "description": "Refreshing smoothie with banana, yogurt, and honey.",
     "ingredients": "Banana, yogurt, milk, honey, ice cubes",
     "instructions": "Blend all ingredients until smooth. Serve cold.",
-    "preparationTime": "5 minutes"
+    "preparationTime": "5 minutes",
+    "isFavourite": false
   }
 ]

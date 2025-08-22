@@ -46,4 +46,14 @@ public class RecipeService {
         }
     }
 
+    public Recipe toggleRecipeFavourite(Recipe recipe) {
+        if (recipe.getIsFavourite()) {
+            recipe.setIsFavourite(false);
+        } else {
+            recipe.setIsFavourite(true);
+        }
+
+        return recipeRepository.save(recipe);
+    }
+
 }
