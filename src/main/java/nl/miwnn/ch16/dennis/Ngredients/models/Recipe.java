@@ -9,6 +9,7 @@ public class Recipe {
     private Long id;
 
     private String name;
+    private String imageUrl;
     private String description;
 
     @Column(columnDefinition = "TEXT")
@@ -35,6 +36,14 @@ public class Recipe {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getDescription() {

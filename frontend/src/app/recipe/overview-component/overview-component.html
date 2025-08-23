@@ -2,7 +2,9 @@
   @for (recipe of recipes; track recipe.id) {
 
       <div class="col">
-          <div class="card m-2 mx-auto my-3 shadow rounded-1 float" style="width: 18rem;">
+          <div class="card mx-auto my-3 shadow rounded-1 float" style="width: 18rem;">
+
+            <img src="{{recipe.imageUrl}}" class="card-img-top object-fit-cover" alt="{{recipe.name}}" [routerLink]="['/details', recipe.id]" role="button">
 
             <div class="card-body" role="button" [routerLink]="['/details', recipe.id]">
               <h5 class="card-title text-truncate">{{recipe.name}}</h5>
@@ -14,7 +16,7 @@
                 <i class="bi bi-clock-fill"></i> {{recipe.preparationTime}}
               </div>
 
-              <div class="ms-auto" (click)="onToggleRecipeFavourite(recipe.id)">
+              <div class="ms-auto" (click)="onToggleRecipeFavourite(recipe.id)" type="button">
                 @if (recipe.isFavourite) {
                   <i class="bi bi-heart-fill"></i>
                 } @else {
@@ -63,6 +65,13 @@
             <label for="preparationTime" class="form-label">Preparation Time</label>
             <input ngModel name="preparationTime" class="form-control" id="preparationTime" required>
           </div>
+
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image Url</label>
+            <input ngModel name="imageUrl" class="form-control" id="imageUrl">
+          </div>
+
+          <input ngModel="false" name="isFavourite" class="form-control" type="hidden">
 
           <div class="modal-footer">
             <button id="close-add-recipe-modal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

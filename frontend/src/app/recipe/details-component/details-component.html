@@ -1,19 +1,35 @@
-<h1>{{recipe.name}}</h1>
-<p>{{recipe.description}}</p>
-<p>{{recipe.ingredients}}</p>
-<p>{{recipe.instructions}}</p>
-<p>{{recipe.preparationTime}}</p>
 
-<div class="d-grid gap-2">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRecipeModal">
-    Edit
-  </button>
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal">
-    Delete
-  </button>
+<div class="row row-cols-2">
+  <div class="col-6">
+
+    <div class="details-tile shadow">
+      <img src="{{recipe.imageUrl}}"  alt="{{recipe.name}}" style="width: 100%; border-radius: 1rem">
+    </div>
+
+  </div>
+
+  <div class="col-6">
+
+    <div class="details-tile shadow">
+      <h1>
+        {{recipe.name}}
+        <i class="bi bi-pencil-square" role="button" data-bs-toggle="modal" data-bs-target="#editRecipeModal"></i>
+        <i class="bi bi-trash3" role="button" data-bs-toggle="modal" data-bs-target="#deleteRecipeModal"></i>
+      </h1>
+      <p>{{recipe.description}}</p>
+      <footer>{{recipe.preparationTime}}</footer>
+    </div>
+
+    <div class="details-tile shadow">
+      <p>{{recipe.ingredients}}</p>
+    </div>
+
+    <div class="details-tile shadow">
+      {{recipe.instructions}}
+    </div>
+
+  </div>
 </div>
-
-
 
 <!-- Edit recipe modal -->
 <div class="modal fade" id="editRecipeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -27,21 +43,22 @@
 
         <form #editForm="ngForm">
 
-          <input ngModel="{{recipe?.id}}" name="id" class="form-control" type="hidden">
+          <input ngModel="{{recipe.id}}" name="id" class="form-control" type="hidden">
+          <input ngModel="{{recipe.isFavourite}}" name="isFavourite" class="form-control" type="hidden">
 
           <div class="mb-3">
             <label for="name" class="form-label">Recipe title</label>
-            <input ngModel="{{recipe?.name}}" name="name" class="form-control" id="name" required>
+            <input ngModel="{{recipe.name}}" name="name" class="form-control" id="name" required>
           </div>
 
           <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea ngModel="{{recipe?.description}}" name="description" class="form-control" id="description" rows="3" required></textarea>
+            <textarea ngModel="{{recipe.description}}" name="description" class="form-control" id="description" rows="3" required></textarea>
           </div>
 
           <div class="mb-3">
             <label for="ingredients" class="form-label">Ingredients</label>
-            <textarea ngModel="{{recipe?.ingredients}}" name="ingredients" class="form-control" id="ingredients" rows="3" required></textarea>
+            <textarea ngModel="{{recipe.ingredients}}" name="ingredients" class="form-control" id="ingredients" rows="3" required></textarea>
           </div>
 
           <div class="mb-3">
@@ -51,7 +68,12 @@
 
           <div class="mb-3">
             <label for="preparationTime" class="form-label">Preparation Time</label>
-            <input ngModel="{{recipe?.preparationTime}}" name="preparationTime" class="form-control" id="preparationTime" required>
+            <input ngModel="{{recipe.preparationTime}}" name="preparationTime" class="form-control" id="preparationTime" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image Url</label>
+            <input ngModel="{{recipe.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl" required>
           </div>
 
           <div class="modal-footer">

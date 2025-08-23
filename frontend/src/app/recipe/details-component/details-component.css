@@ -1,0 +1,12 @@
+.details-tile {
+  background-color: rgb(246, 245, 246);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  /*border-left: 3px solid #dd0031;*/
+}
+
+h1 {
+  font-weight: bold;
+}
