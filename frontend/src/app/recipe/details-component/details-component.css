@@ -10,3 +10,7 @@
 h1 {
   font-weight: bold;
 }
+
+.bi:hover {
+  color: #dd0031;
+}

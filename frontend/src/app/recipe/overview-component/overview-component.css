@@ -1,4 +1,38 @@
+/* Bootstrap Cards */
+.float:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.card {
+  border: none;
+  background-color: rgb(246, 245, 246);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
 .card-img-top {
   width: auto;
   height: 250px;
+}
+
+
+.card:hover {
+  color: #6f42c1;
+}
+
+.text-truncate:hover {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.angular-text {
+  color: rgb(21, 20, 23);
+}
+
+.bi-heart, .bi-heart-fill {
+  color: #dd0031;
 }
